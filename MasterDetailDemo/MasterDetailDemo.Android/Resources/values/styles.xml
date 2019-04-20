@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+  <style name="MainTheme" parent="MainTheme.Base">
+    <!-- Make ListView when selected transparent -->
+    <item name="android:colorActivatedHighlight">@android:color/transparent</item>
+  </style>
+  <!-- Base theme applied no matter what API -->
+  <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->
+    <item name="windowNoTitle">true</item>
+    <!--We will be using the toolbar so no need to show ActionBar-->
+    <item name="windowActionBar">false</item>
+    <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette -->
+    <!-- colorPrimary is used for the default action bar background -->
+    <item name="colorPrimary">#2196F3</item>
+    <!-- colorPrimaryDark is used for the status bar -->
+    <item name="colorPrimaryDark">#1976D2</item>
+    <!-- colorAccent is used as the default value for colorControlActivated
+         which is used to tint widgets -->
+    <!--For the Material Pink -->
+    <!--<item name="android:colorAccent">@color/Material.Pink.100</item>
+    <item name="android:statusBarColor">@color/Material.Pink.500</item>
+    <item name="android:textColorPrimary">@color/Material.White</item>
+    <item name="android:colorPrimary">@color/Material.Pink.300</item>
+    <item name="android:windowBackground">@color/Material.Grey.800</item>
+    <item name="android:navigationBarColor">@color/Material.Pink.500</item>-->
+    <!--<item name="colorAccent">#FF4081</item>-->
+    <!-- You can also set colorControlNormal, colorControlActivated
+         colorControlHighlight and colorSwitchThumbNormal. -->
+    <item name="windowActionModeOverlay">true</item>
+
+    <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
+  </style>
+
+  <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+    <item name="colorAccent">#FF4081</item>
+  </style>
+  <!-- The launcher theme. It sets the main window background to the launch_screen drawable -->
+  <!--<style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowBackground">@drawable/launch</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowFullscreen">true</item>
+  </style>-->
+  <!--<For the Lottie Splash screen>-->
+  <!--<style name="Theme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowsNoTitle">true</item>
+    <item name="android:windowActionBar">false</item>
+    <item name="android:Fullscreen">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowBackground">@drawable/bg_color</item>
+  </style>-->
+</resources>

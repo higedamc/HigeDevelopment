@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MasterDetailDemo.Views.PopUpFromTheBottom"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Visual="Default">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+
+            <!--  First layout  -->
+            <StackLayout
+                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                AbsoluteLayout.LayoutFlags="All"
+                BackgroundColor="White"
+                Spacing="0">
+                <Label
+                    HorizontalOptions="CenterAndExpand"
+                    Text="みゃほわーん"
+                    TextColor="Black"
+                    VerticalOptions="CenterAndExpand" />
+                <StackLayout BackgroundColor="#2196F3">
+                    <Button
+                        BackgroundColor="Transparent"
+                        Clicked="ToggleFlyoutButtonClicked"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Open"
+                        TextColor="White" />
+                </StackLayout>
+            </StackLayout>
+
+            <!--  Second layout  -->
+            <Grid
+                x:Name="flyout"
+                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                AbsoluteLayout.LayoutFlags="All"
+                BackgroundColor="White"
+                IsVisible="false"
+                RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto">
+                        <RowDefinition.Height>
+                            <OnPlatform
+                                x:TypeArguments="GridLength"
+                                Android="0"
+                                WinPhone="0"
+                                iOS="20" />
+                        </RowDefinition.Height>
+                    </RowDefinition>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <BoxView
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Color="Maroon" />
+                <Button
+                    Grid.Row="1"
+                    BackgroundColor="Transparent"
+                    Clicked="ToggleFlyoutButtonClicked"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Close"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+                <Label
+                    Grid.Row="2"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="にゃーん"
+                    TextColor="Black"
+                    VerticalOptions="CenterAndExpand" />
+            </Grid>
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

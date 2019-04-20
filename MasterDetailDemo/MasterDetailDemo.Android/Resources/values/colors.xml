@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="launcher_background">#FFFFFF</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="asAlways">#2E7ACE</color>
+    <color name="goodPink">#D93463 </color>
+    <color name="Material.White">#FFFFFF</color>
+    <color name="Material.Pink.100">#F8BBD0</color>
+    <color name="Material.Pink.300">#F06292</color>
+    <color name="Material.Pink.500">#E91E63</color>
+    <color name="Material.Grey.800">#424242</color>
+    <drawable name="bg_color">#02d1c4</drawable>
+</resources>

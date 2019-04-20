@@ -1,0 +1,143 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controls\**" />
+    <Compile Remove="Model.Data\**" />
+    <Compile Remove="Model\**" />
+    <Compile Remove="ViewModels\**" />
+    <EmbeddedResource Remove="Controls\**" />
+    <EmbeddedResource Remove="Model.Data\**" />
+    <EmbeddedResource Remove="Model\**" />
+    <EmbeddedResource Remove="ViewModels\**" />
+    <None Remove="Controls\**" />
+    <None Remove="Model.Data\**" />
+    <None Remove="Model\**" />
+    <None Remove="ViewModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="BarcodeDecoder.cs" />
+    <Compile Remove="BarcodeDecoding.cs" />
+    <Compile Remove="Converter.cs" />
+    <Compile Remove="IDeviceService.cs" />
+    <Compile Remove="IImageHelper.cs" />
+    <Compile Remove="IImageService.cs" />
+    <Compile Remove="ILaunchClip.cs" />
+    <Compile Remove="ImageControl.cs" />
+    <Compile Remove="ImgCoverter.cs" />
+    <Compile Remove="IPicturePicker.cs" />
+    <Compile Remove="IZxingService.cs" />
+    <Compile Remove="Library.Utility.cs" />
+    <Compile Remove="ProgressUtils.cs" />
+    <Compile Remove="Services\IImageHelper.cs" />
+    <Compile Remove="Services\IToggleSleep.cs" />
+    <Compile Remove="SplashPage.cs" />
+    <Compile Remove="Yokuwakaran\HomeTabbedPage.xaml.cs" />
+    <Compile Remove="Yokuwakaran\MainMasterDetailPage.xaml.cs" />
+    <Compile Remove="Yokuwakaran\SettingsTabbedPage.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Yokuwakaran\HomeTabbedPage.xaml" />
+    <EmbeddedResource Remove="Yokuwakaran\MainMasterDetailPage.xaml" />
+    <EmbeddedResource Remove="Yokuwakaran\SettingsTabbedPage.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="2.7.1" />
+    <PackageReference Include="Toasts.Forms.Plugin" Version="3.3.2" />
+    <PackageReference Include="Torutek.Microsoft.ProjectOxford.Face" Version="1.2.0" NoWarn="NU1701" />
+    <PackageReference Include="UXDivers.GorillaPlayer.SDK" Version="1.5.0" NoWarn="NU1701" />
+    <PackageReference Include="Xam.Plugin.Battery" Version="4.0.0.10-beta" />
+    <PackageReference Include="Xam.Plugin.Media" Version="4.2.0-beta" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.1.1.1-beta" />
+    <PackageReference Include="Xam.Plugins.Forms.ProgressRing" Version="0.1.2" NoWarn="NU1701" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.304370-pre8" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.0.0.304370-pre8" />
+    <PackageReference Include="Xamarin.Plugin.FilePicker" Version="2.1.14-beta" />
+    <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
+    <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="AppShell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Yokuwakaran\Clock.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Yokuwakaran\GradientLabelPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Yokuwakaran\Page1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Yokuwakaran\PopUpFromTheBottom.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Yokuwakaran\SettingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\GamePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\GeneratePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\HomeTabbedPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\ListPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\MainMasterDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\MovieListPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\MoviePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\ScanPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Yokuwakaran\BatteryPage.xaml.cs">
+      <DependentUpon>BatteryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Yokuwakaran\PopUpFromTheBottom.xaml.cs">
+      <DependentUpon>PopUpFromTheBottom.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

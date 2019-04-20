@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MasterDetailDemo.Views.GradientLabelPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MasterDetailDemo">
+    <ContentPage.Content>
+        <StackLayout>
+            <controls:GradientLabel
+                x:Name="label"
+                FontSize="50"
+                HorizontalOptions="Center"
+                Text="ギンギラギンに輝きます✨"
+                TextColor1="Yellow"
+                TextColor2="Fuchsia"
+                VerticalOptions="CenterAndExpand" />
+            <Button
+                Margin="0,0,0,20"
+                BackgroundColor="#2E7ACE"
+                Clicked="Button_Clicked"
+                Text="change color!" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

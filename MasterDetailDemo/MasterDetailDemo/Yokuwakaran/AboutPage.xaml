@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MasterDetailDemo.View.AboutPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:controls1="clr-namespace:MasterDetailDemo"
+    Title="Selfie Page"
+    NavigationPage.HasNavigationBar="False">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <controls1:GradientLabel
+            x:Name="gLabel"
+            FontSize="25"
+            HorizontalOptions="CenterAndExpand"
+            Text="AIで笑顔判定してみよう!"
+            TextColor1="Blue"
+            TextColor2="Fuchsia"
+            VerticalOptions="CenterAndExpand" />
+        <controls:CircleImage
+            x:Name="picture"
+            HeightRequest="250"
+            Source="https://static.thenounproject.com/png/1583030-200.png"
+            WidthRequest="200" />
+        <Button
+            x:Name="TakeASelfie"
+            BackgroundColor="#2196F3"
+            Clicked="TakeASelfie_Clicked"
+            HorizontalOptions="FillAndExpand"
+            Text="自撮りする"
+            Visual="Material" />
+        <Label HorizontalOptions="CenterAndExpand" Text="OR" />
+        <Button
+            x:Name="PickAPic"
+            BackgroundColor="#2196F3"
+            Clicked="PickAPic_Clicked"
+            HorizontalOptions="FillAndExpand"
+            Text="画像ファイルを選ぶ"
+            Visual="Material" />
+    </StackLayout>
+</ContentPage>

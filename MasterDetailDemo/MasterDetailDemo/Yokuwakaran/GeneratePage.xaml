@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MasterDetailDemo.View.GeneratePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <FlexLayout Direction="Column">
+            <Label Margin="5,10,0,0" FontSize="Medium">Result</Label>
+            <Label x:Name="ResultText" LineBreakMode="CharacterWrap" />
+
+            <Editor
+                x:Name="EntryShare"
+                Margin="12"
+                FlexLayout.Grow="1"
+                Placeholder="What you want to convert to QR code?"
+                Text=""
+                TextChanged="EntryTextChanged"
+                Visual="Default" />
+            <AbsoluteLayout>
+                <Label
+                    AbsoluteLayout.LayoutBounds="0.5,0.5"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Text="OR" />
+                <Button
+                    x:Name="TouchMe"
+                    Margin="10"
+                    AbsoluteLayout.LayoutBounds="1,0.5,AutoSize,AutoSize"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    BackgroundColor="#2196F3"
+                    Clicked="Button_Clicked"
+                    Text="Generate"
+                    Visual="Material" />
+                <Button
+                    x:Name="ImageA"
+                    Margin="10"
+                    BackgroundColor="#2196F3"
+                    Clicked="ImageA_Clicked"
+                    Text="Pick A QR"
+                    Visual="Material" />
+            </AbsoluteLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

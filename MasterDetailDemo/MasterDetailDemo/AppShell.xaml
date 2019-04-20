@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="MasterDetailDemo.AppShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MasterDetailDemo.View"
+    xmlns:local1="clr-namespace:MasterDetailDemo.Views"
+    Title="MasterDetailDemo"
+    FlyoutBehavior="Flyout"
+    Route="MasterDetailDemo"
+    RouteHost="x2higetest.com"
+    RouteScheme="app"
+    Visual="Material">
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ShellForegroundColor" Value="White" />
+                <Setter Property="Shell.ShellTitleColor" Value="White" />
+                <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ShellTabBarForegroundColor" Value="White" />
+                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.ShellTabBarTitleColor" Value="White" />
+            </Style>
+            <Style BasedOn="{StaticResource BaseStyle}" TargetType="ShellItem" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <ShellItem Title="Scan, Generate, Setting Page" Icon="">
+        <ShellSection Title="Scan" Icon="scan_white.png">
+            <ShellContent>
+                <local:ScanPage />
+            </ShellContent>
+        </ShellSection>
+        <ShellSection Title="Generate" Icon="generate_white.png">
+            <ShellContent>
+                <local:GeneratePage />
+            </ShellContent>
+        </ShellSection>
+        <ShellSection Title="Battery" Icon="battery_blue_48dp">
+            <ShellContent>
+                <local:BatteryPage />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+    <ShellItem Title="PopUp" Icon="">
+        <ShellSection Title="PopUp Page">
+            <ShellContent>
+                <local1:PopUpFromTheBottom />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+    <ShellItem Title="GradientLabel" Icon="">
+        <ShellSection Title="GradientLabel">
+            <ShellContent>
+                <local1:GradientLabelPage />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+    <ShellItem Title="Selfie Page" Icon="https://static.thenounproject.com/png/1583030-200.png">
+        <ShellSection Title="GradientLabel">
+            <ShellContent>
+                <local:AboutPage />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+    <ShellItem Title="Clock" Icon="clock.png">
+        <ShellSection Title="Clock">
+            <ShellContent>
+                <local1:Clock />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+    <ShellItem Title="Setting" Icon="setting_white.png">
+        <ShellSection Title="Setting">
+            <ShellContent>
+                <local1:SettingPage />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+
+</Shell>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MasterDetailDemo.View.ScanPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MasterDetailDemo"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image
+                Grid.Row="1"
+                Margin="0,0,0,0"
+                HeightRequest="180"
+                HorizontalOptions="CenterAndExpand"
+                IsOpaque="True"
+                Source="ic_camera_blue_500_48dp.png"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="180" />
+            <controls:GradientLabel
+                x:Name="gLabel"
+                FontSize="50"
+                HorizontalOptions="CenterAndExpand"
+                Text="Scan QR code!"
+                TextColor1="Blue"
+                TextColor2="Fuchsia"
+                VerticalOptions="CenterAndExpand" />
+            <!--<Label
+                FontSize="50"
+                HorizontalOptions="CenterAndExpand"
+                Text="Scan QR code!"
+                TextColor="#1976D2"
+                VerticalOptions="CenterAndExpand" />-->
+            <Button
+                x:Name="ButtonScanCustom"
+                BackgroundColor="#2196F3"
+                HorizontalOptions="CenterAndExpand"
+                Text="Scan it!"
+                VerticalOptions="CenterAndExpand"
+                Visual="Material" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
