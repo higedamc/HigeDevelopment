@@ -25,6 +25,20 @@
                 AbsoluteLayout.LayoutFlags="PositionProportional"
                 FontSize="30"
                 Visual="Material" />
+            <Label
+                Margin="20"
+                AbsoluteLayout.LayoutBounds="0,0.92,AutoSize,AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                FontAttributes="Bold"
+                Text="Torch"
+                Visual="Material" />
+            <Switch
+                x:Name="switchToggle"
+                Margin="20"
+                AbsoluteLayout.LayoutBounds="0,1,AutoSize,AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                Toggled="SwitchToggle_Toggled"
+                Visual="Material" />
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

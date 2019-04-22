@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Media;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -92,6 +93,17 @@ namespace MasterDetailDemo.View
             //public string CircleName { get; set; }
             public string PercenTage { get; set; }
             public string Progress { get; set; }
+        }
+
+        // Toggle flashlight
+        private void SwitchToggle_Toggled(object sender, ToggledEventArgs e)
+        {
+            if(e.Value == true)
+            Flashlight.TurnOnAsync();
+            else
+            {
+                Flashlight.TurnOffAsync();
+            }
         }
     }
 }
