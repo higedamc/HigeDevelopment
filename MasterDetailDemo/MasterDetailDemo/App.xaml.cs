@@ -1,5 +1,8 @@
 ﻿//using App7;
 using MasterDetailDemo.Views;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,6 +21,7 @@ namespace MasterDetailDemo
         {
             // Handle when your app starts
             //MainPage = new Page1();
+            AppCenter.Start("android=493116fc-5470-475d-9335-765f4ea740b9;" + "uwp={Your UWP App secret here};" + "ios={Your iOS App secret here}", typeof(Analytics), typeof(Crashes));
         }
 
         protected override void OnSleep()

@@ -54,6 +54,8 @@
 
   <ItemGroup>
     <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="2.7.1" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="1.14.0" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="1.14.0" />
     <PackageReference Include="Toasts.Forms.Plugin" Version="3.3.2" />
     <PackageReference Include="Torutek.Microsoft.ProjectOxford.Face" Version="1.2.0" NoWarn="NU1701" />
     <PackageReference Include="UXDivers.GorillaPlayer.SDK" Version="1.5.0" NoWarn="NU1701" />
